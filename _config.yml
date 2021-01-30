@@ -44,12 +44,9 @@ defaults:
       image: "assets/img/uploads/screenshot-editor.jpg"
 
 collections:
-  solutions:
+  slides:
     output: false
-  products:
-    output: true
-  product_rows:
-    output: false
+    sort_by: order
 
 # Build settings
 markdown: kramdown
