@@ -10,7 +10,9 @@ description: Natural Shoe Cleaning Kits
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{site.description}}" />
     <title>{{page.title}}</title>
-    <link rel="canonical" href="/" />
+    <link rel="canonical" href="{{site.url}}" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
@@ -19,19 +21,21 @@ description: Natural Shoe Cleaning Kits
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    {% for slide in site.slides %}
+      <link rel="preload" href="{{slide.background}}" as="image">
+    {% endfor %}
+
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-dark fixed-top shadow-sm" style="background-color: #4ab0ab;">
-        <div class="container">
-          <a class="navbar-brand rounded p-0 m-0 bg-white" href="/">
-            <img src="assets/img/uploads/Totally-Cleaner-Logo-T.png" alt="" height="60" class="d-none d-md-inline-block align-top">
-            <img src="assets/img/uploads/Totally-Cleaner-Logo-Text.png" alt="" height="60" style="max-width: 100%;" class="d-inline-block align-top">
-          </a>
-        </div>
-      </nav>
-    </header>
-
+    <style media="screen">
+      .vertical {
+        position: absolute;
+        font-weight: 900;
+        transform-origin: 0 0;
+        bottom: 100px;
+        transform: rotate(270deg);
+      }
+    </style>
     <main>
       <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
@@ -43,6 +47,16 @@ description: Natural Shoe Cleaning Kits
         <div class="carousel-inner">
           {% for slide in site.slides %}
           <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <header>
+              <nav class="navbar navbar-dark" style="background-color: {{slide.color}};">
+                <div class="container">
+                  <a class="navbar-brand rounded p-0 m-0 bg-white" href="/">
+                    <img src="assets/img/uploads/Totally-Cleaner-Logo-T.png" alt="" height="60" class="d-none d-md-inline-block align-top">
+                    <img src="assets/img/uploads/Totally-Cleaner-Logo-Text.png" alt="" height="60" style="max-width: 100%;" class="d-inline-block align-top">
+                  </a>
+                </div>
+              </nav>
+            </header>
             <div class="container-fluid h-100">
               <div class="row h-100">
                 <div
@@ -51,12 +65,7 @@ description: Natural Shoe Cleaning Kits
                   {{slide.content}}
                 </div>
                 <div style="position: relative; background-color: {{slide.color}};" class="col-3 h-100 align-self-end">
-                  <h1 style="position: absolute;
-                      font-weight: 900;
-                      transform-origin: 0 0;
-                      bottom: 0px;
-                      transform: rotate(270deg);"
-                      class="text-white display-1">{{slide.vertical}}</h1>
+                  <h1 class="vertical text-white display-1">{{slide.vertical}}</h1>
                 </div>
               </div>
             </div>
@@ -88,6 +97,15 @@ description: Natural Shoe Cleaning Kits
       <!-- Marketing messaging and featurettes
   ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img src="logo.svg" alt="test" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
 
       <div class="container marketing">
         <!-- Three columns of text below the carousel -->
