@@ -1,6 +1,4 @@
 ---
-title: Totally Cleaner SHOES - All Natural Shoe Cleaner Kit
-description: Natural Shoe Cleaning Kits
 ---
 
 <!DOCTYPE html>
@@ -9,7 +7,7 @@ description: Natural Shoe Cleaning Kits
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{site.description}}" />
-    <title>{{page.title}}</title>
+    <title>{{site.title}}</title>
     <link rel="canonical" href="{{site.url}}" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -20,295 +18,23 @@ description: Natural Shoe Cleaning Kits
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    {% for slide in site.slides %}
-      <link rel="preload" href="{{slide.background}}" as="image">
-    {% endfor %}
 
   </head>
   <body>
-    <style media="screen">
-      .vertical {
-        position: absolute;
-        font-weight: 900;
-        transform-origin: 0 0;
-        bottom: 100px;
-        transform: rotate(270deg);
-      }
-    </style>
-    <main>
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-          {% for item in site.slides %}
-          <li data-bs-target="#myCarousel" data-bs-slide-to="{{forloop.index0}}" class="{% if forloop.first %}active{% endif %}"></li>
-          {% endfor %}
-        </ol>
+    <main class="container">
 
-        <div class="carousel-inner">
-          {% for slide in site.slides %}
-          <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <header>
-              <nav class="navbar navbar-dark" style="background-color: {{slide.color}};">
-                <div class="container">
-                  <a class="navbar-brand rounded p-0 m-0 bg-white" href="/">
-                    <img src="assets/img/uploads/Totally-Cleaner-Logo-T.png" alt="" height="60" class="d-none d-md-inline-block align-top">
-                    <img src="assets/img/uploads/Totally-Cleaner-Logo-Text.png" alt="" height="60" style="max-width: 100%;" class="d-inline-block align-top">
-                  </a>
-                </div>
-              </nav>
-            </header>
-            <div class="container-fluid h-100">
-              <div class="row h-100">
-                <div
-                style="background-image: url({{slide.background}});background-repeat: no-repeat;background-position: center;background-size: cover;"
-                class="col-9 h-100">
-                  {{slide.content}}
-                </div>
-                <div style="position: relative; background-color: {{slide.color}};" class="col-3 h-100 align-self-end">
-                  <h1 class="vertical text-white display-1">{{slide.vertical}}</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
+      <h1 class="display-1 text-center">
+        <span class="display-1">Since I have not heard from you on this, </span>
+        <span class="display-2">I have to assume your priorities have changed.</span>
+      </h1>
 
+      <hr>
 
-        <a
-          class="carousel-control-prev"
-          href="#myCarousel"
-          role="button"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#myCarousel"
-          role="button"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </a>
-      </div>
+      <input type="text" class="text-center form-control" value="Since I have not heard from you on this, I have to assume your priorities have changed.">
 
-      <!-- Marketing messaging and featurettes
-  ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <img src="logo.svg" alt="test" class="img-fluid">
-          </div>
-        </div>
-      </div>
-
-
-      <div class="container marketing">
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-4">
-            <img
-              src="assets/img/uploads/shoeanew-brush.jpeg"
-              width="140"
-              height="140"
-              alt=""
-              class="rounded-circle"
-            />
-
-            <h2>BRAND NEW SHOES</h2>
-            <p>
-              Let's be honest, it won't FIX a broken shoe, but it will REMOVE
-              scuffs, marks, dirt and more to make your shoes look brand new.
-            </p>
-            <p>
-              <a
-                class="btn btn-secondary"
-                href="{{site.order_cta}}"
-                role="button"
-                >View details &raquo;</a
-              >
-            </p>
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img
-              src="assets/img/uploads/made-in-usa.jpeg"
-              width="140"
-              height="140"
-              alt=""
-              class="rounded-circle"
-            />
-
-            <h2>LAST SHOE CLEANER YOU'LL EVER BUY</h2>
-            <p>
-              Cleans up to 85+ shoes. To ensure that your shoes are spotless, we
-              developed a specific formula of powerful ingredients that only
-              requires a small amount to get the job done. One bottle of our all
-              natural solution will be enough to clean your entire shoe
-              collection.
-            </p>
-            <p>
-              <a
-                class="btn btn-secondary"
-                href="{{site.order_cta}}"
-                role="button"
-                >View details &raquo;</a
-              >
-            </p>
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img
-              src="assets/img/uploads/shoeanew-towel.jpeg"
-              width="140"
-              height="140"
-              alt=""
-              class="rounded-circle"
-            />
-
-            <h2>TAKES CARE OF MOST FABRICS</h2>
-            <p>
-              Apart from suede, which we know can be ruined if it gets wet. Our
-              water based solution can clean most other fabrics. Leather,
-              canvas, vinyl, knit, mesh, cotton, plastic, nylon, rubber and
-              more.
-            </p>
-            <p>
-              <a
-                class="btn btn-secondary"
-                href="{{site.order_cta}}"
-                role="button"
-                >View details &raquo;</a
-              >
-            </p>
-          </div>
-          <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-
-        <!-- START THE FEATURETTES -->
-
-        <hr class="featurette-divider" />
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">
-              First featurette heading.
-              <span class="text-muted">It’ll blow your mind.</span>
-            </h2>
-            <p class="lead">
-              Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-              ligula porta felis euismod semper. Praesent commodo cursus magna,
-              vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-              commodo.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <svg
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              width="500"
-              height="500"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
-          </div>
-        </div>
-
-        <hr class="featurette-divider" />
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">
-              Oh yeah, it’s that good.
-              <span class="text-muted">See for yourself.</span>
-            </h2>
-            <p class="lead">
-              Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-              ligula porta felis euismod semper. Praesent commodo cursus magna,
-              vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-              commodo.
-            </p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <svg
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              width="500"
-              height="500"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
-          </div>
-        </div>
-
-        <hr class="featurette-divider" />
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">
-              And lastly, this one. <span class="text-muted">Checkmate.</span>
-            </h2>
-            <p class="lead">
-              Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-              ligula porta felis euismod semper. Praesent commodo cursus magna,
-              vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-              commodo.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <svg
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              width="500"
-              height="500"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
-          </div>
-        </div>
-
-        <hr class="featurette-divider" />
-
-        <!-- /END THE FEATURETTES -->
-      </div>
-      <!-- /.container -->
-
-      <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>
-          &copy; 2017-2021 Company, Inc. &middot;
-          <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-        </p>
-      </footer>
     </main>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"
     ></script>
   </body>

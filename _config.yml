@@ -1,11 +1,10 @@
 title: >-
-  Totally Cleaner SHOES - Natural Shoe Cleaner Kit
-email: help@shoeanew.com
+  I have to assume your priorities have changed.
+email: blair@andersonassociates.net
 description: >- # this means to ignore newlines until "baseurl:"
-   Natural Shoe cleaner kit, with Brush and Cloth for Cleaning Sneakers, Tennis shoes, Canvas, Plastic, Mesh, Knit and More
+   Since I have not heard from you on this, I have to assume your priorities have changed.
 baseurl: "" # the subpath of your site if applicable, e.g. /blog
-url: "https://www.totallycleaner.com" # the base hostname & protocol for your site, e.g. https://example.com
-order_cta: https://www.amazon.com/Shoe-Cleaner-Kit-ShoeAnew-Microfiber/dp/B01F9FVUEA
+url: "https://priorities.netlify.app" # the base hostname & protocol for your site, e.g. https://example.com
 
 # Permalink format (/blog/ is ignored for pages)
 permalink: /:title
@@ -15,38 +14,20 @@ permalink: /:title
 section: true
 
 # set to 'true' to enable Netlify CMS (/admin) in production builds
-netlifycms: true
+netlifycms: false
 
 # set to 'true' to enable Google Analytics tracking code in production builds
 analytics: false
 
-# Compress CSS
-sass:
-  style: compressed
-  sass_dir: _sass
+# # Compress CSS
+# sass:
+#   style: compressed
+#   sass_dir: _sass
 
 # Compress HTML (in liquid via layouts/compress.html)
 compress_html:
   clippings: all
 
-# set some common post defaults
-defaults:
-  - scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts" # previously `post` in Jekyll 2.2.
-    values:
-      layout: "post" # set the correct default template for a post
-      section: "post" # set the root section name
-  - scope:
-      path: "" # an empty string here means all files in the project
-      type: "solutions" # previously `post` in Jekyll 2.2.
-    values:
-      image: "assets/img/uploads/screenshot-editor.jpg"
-
-collections:
-  slides:
-    output: false
-    sort_by: order
 
 # Build settings
 markdown: kramdown
