@@ -3,3 +3,6 @@ _site
 .jekyll-metadata
 .users.yml
 .jekyll-cache/
+
+# Local Netlify folder
+.netlify
